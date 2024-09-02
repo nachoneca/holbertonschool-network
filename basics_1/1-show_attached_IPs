@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#dockdok
 ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | while read -r ip; do
     echo "$ip$"
 done
