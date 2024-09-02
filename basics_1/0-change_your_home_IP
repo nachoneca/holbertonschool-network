@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #dokdok
+cp /etc/hosts /etc/hosts.backup
 
 echo "127.0.0.2 localhost" >> /etc/hosts
 
