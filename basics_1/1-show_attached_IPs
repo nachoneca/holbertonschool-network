@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-
-# Mostrar todas las direcciones IPv4 activas en la máquina
 ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | while read -r ip; do
     echo "$ip$"
 done
