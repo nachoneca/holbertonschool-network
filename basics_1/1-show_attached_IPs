@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Mostrar todas las direcciones IPv4 activas, incluyendo localhost
-ip -4 -o addr show | awk '{print $4}' | cut -d/ -f1
+#displays all active IPv4 IPs on the machine it’s executed on
+
+ifconfig | grep 'inet ' | cut -d ' ' -f10
